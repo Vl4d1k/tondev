@@ -12,6 +12,7 @@ contract FootballTeamTokens {
 
     Club[] clubArr;
     mapping(uint => uint) tokenToOwner;
+    mapping(uint => uint) tokenToPrice;
 
     constructor() public {
         require(tvm.pubkey() != 0, 101);
@@ -23,8 +24,8 @@ contract FootballTeamTokens {
         tokenToOwner[tokenId] = pubKeyOfNewOwner;
     }
 
-    function changeClubCost(uint tokenId, uint cost) public checkOwnerAndAccept(tokenId) {
-        clubArr[tokenId].cost = cost;
+    function changePrice(uint tokenId, uint price) public checkOwnerAndAccept(tokenId) {
+        tokenToPrice[tokenId] = price;
     }
 
     function createClub(string name, string league, uint rating, uint cost) public isTeamExists(name) {
