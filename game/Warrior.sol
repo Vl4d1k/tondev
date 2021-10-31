@@ -1,10 +1,12 @@
 pragma ton-solidity >= 0.35.0;
 pragma AbiHeader expire;
 
-import './MilitaryUnit';
+import './MilitaryUnit.sol';
 
 contract Warrior is MilitaryUnit {
-    uint helthPoints = 3;
-    uint armor = 3;
-    uint attackPower = 4;
+    constructor() public {
+        helthPoints = 30;
+        armor = 3;
+        attackPower = 4;
+    }
 }

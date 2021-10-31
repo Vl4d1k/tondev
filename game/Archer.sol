@@ -1,10 +1,12 @@
 pragma ton-solidity >= 0.35.0;
 pragma AbiHeader expire;
 
-import './MilitaryUnit';
+import './MilitaryUnit.sol';
 
 contract Archer is MilitaryUnit {
-    uint helthPoints = 2;
-    uint armor = 2;
-    uint attackPower = 5;
+    constructor() public {
+        helthPoints = 20;
+        armor = 2;
+        attackPower = 5;
+    }
 }
