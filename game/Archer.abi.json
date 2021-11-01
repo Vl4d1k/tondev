@@ -43,15 +43,6 @@
 			]
 		},
 		{
-			"name": "setHealthPoints",
-			"inputs": [
-				{"name":"_helthPoints","type":"uint256"}
-			],
-			"outputs": [
-				{"name":"value0","type":"uint256"}
-			]
-		},
-		{
 			"name": "getArmor",
 			"inputs": [
 			],
